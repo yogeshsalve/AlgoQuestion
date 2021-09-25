@@ -39,12 +39,22 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'exam' => 'required',
+            'standard' => 'required',
+            'subject' => 'required',
+            'chapter' => 'required',
+            'publication' => 'required',
+            'level' => 'required',
             'question' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'answer' => 'required',
             'hint' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
   
+        
         $input = $request->all();
+        
+        // $input = $request->input('standard');
+        
   
         if ($image1 = $request->file('question')) {
             $destinationPath = 'questions/';
@@ -62,9 +72,222 @@ class ProductController extends Controller
     
         Product::create($input);
      
-        return redirect("/upload")
+        return redirect("/NEET-XI")
                         ->with('success','Question Uploaded successfully.');
     }
+    //-----------------------------------------------------------------------------------------------
+
+    public function store1(Request $request)
+    {
+        $request->validate([
+            'exam' => 'required',
+            'standard' => 'required',
+            'subject' => 'required',
+            'chapter' => 'required',
+            'publication' => 'required',
+            'level' => 'required',
+            'question' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'answer' => 'required',
+            'hint' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+  
+        
+        $input = $request->all();
+        
+        // $input = $request->input('standard');
+        
+  
+        if ($image1 = $request->file('question')) {
+            $destinationPath = 'questions/';
+            $profileImage = date('YmdHis') . "." . $image1->getClientOriginalExtension();
+            $image1->move($destinationPath, $profileImage);
+            $input['question'] = "$profileImage";
+        } 
+
+         if($image2 = $request->file('hint')) {
+            $destinationPath = 'hints/';
+            $profileImage = date('YmdHis') . "." . $image2->getClientOriginalExtension();
+            $image2->move($destinationPath, $profileImage);
+            $input['hint'] = "$profileImage";
+        }
+    
+        Product::create($input);
+     
+        return redirect("/NEET-XII")
+                        ->with('success','Question Uploaded successfully.');
+    }
+
+
+    //jeexi function stars
+    public function jeexi(Request $request)
+    {
+        $request->validate([
+            'exam' => 'required',
+            'standard' => 'required',
+            'subject' => 'required',
+            'chapter' => 'required',
+            'publication' => 'required',
+            'level' => 'required',
+            'question' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'answer' => 'required',
+            'hint' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+  
+        
+        $input = $request->all();
+        
+        // $input = $request->input('standard');
+        
+  
+        if ($image1 = $request->file('question')) {
+            $destinationPath = 'questions/';
+            $profileImage = date('YmdHis') . "." . $image1->getClientOriginalExtension();
+            $image1->move($destinationPath, $profileImage);
+            $input['question'] = "$profileImage";
+        } 
+
+         if($image2 = $request->file('hint')) {
+            $destinationPath = 'hints/';
+            $profileImage = date('YmdHis') . "." . $image2->getClientOriginalExtension();
+            $image2->move($destinationPath, $profileImage);
+            $input['hint'] = "$profileImage";
+        }
+    
+        Product::create($input);
+     
+        return redirect("/JEE-XI")
+                        ->with('success','Question Uploaded successfully.');
+    }
+    //jeexi function ends
+
+    //jeexii function stars
+     public function jeexii(Request $request)
+     {
+         $request->validate([
+             'exam' => 'required',
+             'standard' => 'required',
+             'subject' => 'required',
+             'chapter' => 'required',
+             'publication' => 'required',
+             'level' => 'required',
+             'question' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+             'answer' => 'required',
+             'hint' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+         ]);
+   
+         
+         $input = $request->all();
+         
+         // $input = $request->input('standard');
+         
+   
+         if ($image1 = $request->file('question')) {
+             $destinationPath = 'questions/';
+             $profileImage = date('YmdHis') . "." . $image1->getClientOriginalExtension();
+             $image1->move($destinationPath, $profileImage);
+             $input['question'] = "$profileImage";
+         } 
+ 
+          if($image2 = $request->file('hint')) {
+             $destinationPath = 'hints/';
+             $profileImage = date('YmdHis') . "." . $image2->getClientOriginalExtension();
+             $image2->move($destinationPath, $profileImage);
+             $input['hint'] = "$profileImage";
+         }
+     
+         Product::create($input);
+      
+         return redirect("/JEE-XII")
+                         ->with('success','Question Uploaded successfully.');
+     }
+     //jeexii function ends
+
+
+     //cetxi function stars
+     public function cetxi(Request $request)
+     {
+         $request->validate([
+             'exam' => 'required',
+             'standard' => 'required',
+             'subject' => 'required',
+             'chapter' => 'required',
+             'publication' => 'required',
+             'level' => 'required',
+             'question' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+             'answer' => 'required',
+             'hint' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+         ]);
+   
+         
+         $input = $request->all();
+         
+         // $input = $request->input('standard');
+         
+   
+         if ($image1 = $request->file('question')) {
+             $destinationPath = 'questions/';
+             $profileImage = date('YmdHis') . "." . $image1->getClientOriginalExtension();
+             $image1->move($destinationPath, $profileImage);
+             $input['question'] = "$profileImage";
+         } 
+ 
+          if($image2 = $request->file('hint')) {
+             $destinationPath = 'hints/';
+             $profileImage = date('YmdHis') . "." . $image2->getClientOriginalExtension();
+             $image2->move($destinationPath, $profileImage);
+             $input['hint'] = "$profileImage";
+         }
+     
+         Product::create($input);
+      
+         return redirect("/CET-XI")
+                         ->with('success','Question Uploaded successfully.');
+     }
+     //cetxi function ends
+
+     //cetxii function stars
+     public function cetxii(Request $request)
+     {
+         $request->validate([
+             'exam' => 'required',
+             'standard' => 'required',
+             'subject' => 'required',
+             'chapter' => 'required',
+             'publication' => 'required',
+             'level' => 'required',
+             'question' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+             'answer' => 'required',
+             'hint' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+         ]);
+   
+         
+         $input = $request->all();
+         
+         // $input = $request->input('standard');
+         
+   
+         if ($image1 = $request->file('question')) {
+             $destinationPath = 'questions/';
+             $profileImage = date('YmdHis') . "." . $image1->getClientOriginalExtension();
+             $image1->move($destinationPath, $profileImage);
+             $input['question'] = "$profileImage";
+         } 
+ 
+          if($image2 = $request->file('hint')) {
+             $destinationPath = 'hints/';
+             $profileImage = date('YmdHis') . "." . $image2->getClientOriginalExtension();
+             $image2->move($destinationPath, $profileImage);
+             $input['hint'] = "$profileImage";
+         }
+     
+         Product::create($input);
+      
+         return redirect("/CET-XII")
+                         ->with('success','Question Uploaded successfully.');
+     }
+     //cetxii function ends
+
+
      
     /**
      * Display the specified resource.

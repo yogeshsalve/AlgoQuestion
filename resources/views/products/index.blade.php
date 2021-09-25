@@ -6,6 +6,7 @@
             <div class="pull-left">
                 <h2>indexs</h2>
             </div>
+            <br>
             <div class="pull-right">
                 <a class="btn btn-success" href="/upload"> Create New Question</a>
             </div>

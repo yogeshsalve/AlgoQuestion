@@ -10,6 +10,6 @@ class Product extends Model
     use HasFactory;
   
     protected $fillable = [
-        'question', 'answer', 'hint'
+        'exam','subject', 'publication', 'standard', 'chapter', 'level','question', 'answer', 'hint'
     ];
 }
