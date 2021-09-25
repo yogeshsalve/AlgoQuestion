@@ -28,9 +28,6 @@ Route::view('/test', "test");
 
 Route::view('/NEET-XI', "neetxi");
 Route::view('/NEET-XII', "neetxii");
-
-
-
 Route::resource('products', ProductController::class);
 Route::post('/NEET-XII', [ProductController::class, 'store1']);
 
