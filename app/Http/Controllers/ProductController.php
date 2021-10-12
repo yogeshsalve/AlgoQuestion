@@ -14,10 +14,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate(5);
-    
-        return view('products.index',compact('products'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        
+        $products = Product::latest()->simplePaginate(3);
+        $products2 = Product::all();
+        $count=count($products2);
+        return view('products.index',compact('products','count'))
+            ->with('i');
     }
    
     /**
@@ -318,22 +320,29 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
+    
     public function update(Request $request, Product $product)
     {
         $request->validate([
-            'name' => 'required',
-            'detail' => 'required'
+            'question' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'answer' => 'required',
+            'hint' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
   
         $input = $request->all();
   
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }else{
-            unset($input['image']);
+        if ($image1 = $request->file('question')) {
+            $destinationPath = 'questions/';
+            $profileImage = date('YmdHis') . "." . $image1->getClientOriginalExtension();
+            $image1->move($destinationPath, $profileImage);
+            $input['question'] = "$profileImage";
+        } 
+
+         if($image2 = $request->file('hint')) {
+            $destinationPath = 'hints/';
+            $profileImage = date('YmdHis') . "." . $image2->getClientOriginalExtension();
+            $image2->move($destinationPath, $profileImage);
+            $input['hint'] = "$profileImage";
         }
           
         $product->update($input);
@@ -341,6 +350,8 @@ class ProductController extends Controller
         return redirect()->route('products.index')
                         ->with('success','Product updated successfully');
     }
+  
+
   
     /**
      * Remove the specified resource from storage.

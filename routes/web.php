@@ -21,6 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 Route::view('/create_paper', "createpaper");
 Route::view('/select_exam', "selectexam");
 Route::view('/upload', "upload");
@@ -28,7 +29,9 @@ Route::view('/test', "test");
 
 Route::view('/NEET-XI', "neetxi");
 Route::view('/NEET-XII', "neetxii");
+
 Route::resource('products', ProductController::class);
+
 Route::post('/NEET-XII', [ProductController::class, 'store1']);
 
 Route::view('/JEE-XI', "jeexi");

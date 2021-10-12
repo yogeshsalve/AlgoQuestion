@@ -1,16 +1,18 @@
-@extends('products.layout')
-     
+@extends('layouts.app')
+
 @section('content')
+<div class="container">
+    <div class="card shadow p-5 mb-2 bg-white rounded">
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Product</h2>
+        <div class="col">
+            
+                <h2>Edit Question</h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
+            <div class="col">
+                <a class="btn btn-danger float-right" href="{{ route('products.index') }}"> Back</a>
             </div>
         </div>
-    </div>
+    
      
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -28,29 +30,56 @@
         @method('PUT')
      
          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $product->name }}" class="form-control" placeholder="Name">
+                <strong>Question:</strong>
+                    <input type="file" name="question" class="form-control" placeholder="Question"><br>
+                    <!-- <img src="/questions/{{ $product->question }}" width="100px"> -->
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    <strong>Detail:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail">{{ $product->detail }}</textarea>
+                <!-- <strong>Question:</strong> -->
+                    <!-- <input type="file" name="question" class="form-control" placeholder="Question"><br> -->
+                    <img src="/questions/{{ $product->question }}" width="100px">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    <strong>Image:</strong>
-                    <input type="file" name="image" class="form-control" placeholder="image">
-                    <img src="/image/{{ $product->image }}" width="300px">
+                    <strong>Answer:</strong>
+                    <input type="text" name="answer" value="{{ $product->answer }}" class="form-control" placeholder="Answer" style="text-transform:uppercase" oninput="this.value = this.value.toUpperCase()" >
                 </div>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <strong>Hint:</strong>
+                    <input type="file" name="hint" class="form-control" placeholder="image"><br>
+                    <!-- <img src="/hints/{{ $product->hint }}" width="100px"> -->
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <!-- <strong>Hint:</strong> -->
+                    <!-- <input type="file" name="hint" class="form-control" placeholder="image"><br> -->
+                    <img src="/hints/{{ $product->hint }}" width="100px">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary btn-lg">Submit</button>
             </div>
         </div>
      
     </form>
+    </div>
+    </div>
 @endsection

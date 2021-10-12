@@ -25,7 +25,7 @@
                 <li class="list-group-item">Blueprint</li>
                 </ul>
                 <br>
-                <a href="" class="btn btn-primary">Upload Questions</a> 
+                <a href="/upload" class="btn btn-primary">Upload Questions</a> 
                 </div>
           </div>
           <div class="col-md-10">
@@ -58,64 +58,78 @@
         <div class="col-auto">  
 
             <div class="alert alert-info border border-secondary" role="alert">
-                <div class="row">
+                
+                <div class="row ">
+                    <div class="col-sm-2" style="display:none">
                     <div class="btn-group btn-group-inline m-2">
-                        <div class="form-group ">           
-                        <select class="form-control" name="exam" id="exampleFormControlSelect1">
+                        <div class="form-group ">  
+                        <!--<h5 class="card-title">Examination</h5>-->
+                        <select class="form-control"  name="exam" id="exampleFormControlSelect1">
                         <option value="NEET" selected >NEET</option>         
                         </select>
                         </div>
                     </div>
+                    </div>
 
-                    <div class="btn-group btn-group-inline m-2">
-                        <div class="form-group ">           
+                    <div class="col-sm-1">
+                    <div class="btn-group btn-group-inline mt-2">
+                        <div class="form-group ">   
+                        <h5 class="card-title">Standard</h5>
                         <select class="form-control" name="standard" id="exampleFormControlSelect1">
                         <option value="XI" selected >XI</option>         
                         </select>
                         </div>
                     </div>
+                    </div>
 
 
-
-
-                    <div class="btn-group btn-group-inline m-2">
+                    <div class="col-sm-2">
+                    <div class="btn-group btn-group-inline mt-2">
                             <div class="form-group "> 
+                            <h5 class="card-title">Subject</h5>
                     <select class="form-control" name="subject" id="subject">
                         <option value="" selected="selected" disabled>Select Subject</option>
                     </select>
                     </div>
                     </div>
+                    </div>
                 
-                    <div class="btn-group btn-group-inline m-2">
+                    <div class="col-sm-2">
+                    <div class="btn-group btn-group-inline mt-2">
                             <div class="form-group "> 
+                            <h5 class="card-title">Publication</h5>
                     <select class="form-control" name="publication" id="publication">
                         <option value="" selected="selected" disabled>Please Select Subject </option>
                     </select>
                     </div>
                     </div>
+                    </div>
 
-                    <div class="btn-group btn-group-inline m-2">
+                    <div class="col-sm-3">
+                    <div class="btn-group btn-group-inline mt-2">
                             <div class="form-group ">
+                                <h5 class="card-title">Chapter</h5>
                     <select class="form-control" name="chapter" id="chapter">
                         <option value="" selected="selected" disabled>Please Select Publication</option>
                     </select>
                     </div>
                     </div>
+                    </div>
 
 
 
 
-
-
-                    <div class="btn-group btn-group-inline m-2 ">
+                    <div class="col-sm-2">
+                    <div class="btn-group btn-group-inline mt-2 ">
                         <div class="form-group ">
-                        
+                        <h5 class="card-title">Level</h5>
                             <select class="form-control" name="level" id="exampleFormControlSelect1">
                             <option selected disabled>Select Level</option>
                             <option>Standard</option>
                             <option>Higher</option>                 
                             </select>
                         </div>
+                    </div>
                     </div>
                 </div>  
             </div>
@@ -126,7 +140,7 @@
 
                 <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 m-2">
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
                         
                         <div class="card-body">
                             <h5 class="card-title">Question</h5>
@@ -136,7 +150,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
                        
                         <div class="card-body">
                             <h5 class="card-title">Answer</h5>
@@ -152,7 +166,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
                         
                         <div class="card-body">
                             <h5 class="card-title">Hint</h5>
@@ -188,7 +202,7 @@
 <script>
 var subjectObject = {
     "PHYSICS": {
-    "MARVEL PUBLICATION": ["chaper 1", "Images", "Tables", "Lists"],
+    "MARVEL PUBLICATION": ["1. Units & Measurements", "2. Scalers & Vetors", "3. Motion in a straight light ", "4. Motion", "5. Laws of Motion & Friction", "6. Work , Energy, Power & Collision", "7. Rotational Motion", "8. Gravitation", "9.Elasticity", "10. Fluid Mechanics and Surface Tension", "11. Thermal Properties of Matter", "12. Kinetic Theory of Gases & Thermodynamics", "13. Oscillations", "14. Sound Waves and Wave Motions", "15. Stationary Waves"],
     "MTG PUBLICATION": ["Borders", "Margins", "Backgrounds", "Float"],
     "PYQS PUBLICATION": ["Variables", "Operators", "Functions", "Conditions"]    
   },

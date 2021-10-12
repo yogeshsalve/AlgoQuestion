@@ -1,6 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
+
 <!-- <div class="container"> -->
     <div class="row justify-content-center m-2">
         <div class="col-md-12 ">
@@ -29,8 +48,8 @@
   <li class="list-group-item">Questionn Bank</li>
   <li class="list-group-item">Blueprint</li>
 </ul>
-<br>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<!--<br>-->
+<!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
   <!-- </div> -->
 </div></div>
 
@@ -45,45 +64,45 @@
 </div> -->
 
 <!-- second card start-->
-<div class="card">
-    <div class="card-body">Need Help? <a href = "tel: +919422082780">Call US</a> | <a href = "">Whatsapp</a> | <a href="">Email</a></div>
+<div class="card shadow p-1 mb-1 bg-white rounded">
+    <div class="card-body">Need Help ?&nbsp;&nbsp;<a href = "tel: +919422082780" class = "link-light"><i class="fa fa-phone"></i>&nbsp;Call US</a> | <a href = ""><i class="fa fa-whatsapp"></i>&nbsp;Whatsapp</a> | <a href=""><i class="fa fa-envelope"></i>&nbsp;Email</a>  </div>
   </div>
 <!-- second card ends -->
 <br>
 <!-- third card starts -->
-<div class="card">    
-  <div class="btn-group" role="group" aria-label="Basic outlined example">
-  <button type="button" class="btn btn-outline-primary bg-primary text-white">Create New Test</button>
-  <button type="button" class="btn btn-outline-primary">Add Questions</button>
-  <button type="button" class="btn btn-outline-primary">Preview & Print</button>
+ 
+<div class="row">
+    <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
+<button type="button" class="btn btn-primary btn-lg btn-block">Create New Test</button>
+</div>
+    <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
+<a href = "/upload"><button type="button" class="btn btn-primary btn-lg btn-block">Upload Questions</button></a>
+</div>
+    <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
+<button type="button" class="btn btn-primary btn-lg btn-block">Preview & Print</button>
 </div>
 </div>
+
+<!--  <div class="btn-group" role="group" aria-label="Basic outlined example">-->
+<!--  <button type="button" class="btn btn-outline-primary bg-primary text-white">Create New Test</button>-->
+<!--  <a href = "/upload"><button type="button" class="btn btn-outline-primary text-white">Add Questions</button></a>-->
+<!--  <button type="button" class="btn btn-outline-primary">Preview & Print</button>-->
+<!--</div>-->
+
 <!-- third card end -->
 <br>
 <!-- forth card start -->
-<div class="card">
-    <div class="card-body">&nbsp;&nbsp;&nbsp;&nbsp;Select Exam <br>
+<!--<div class="card">-->
+<!--    <div class="card-body">&nbsp;&nbsp;&nbsp;&nbsp;Select Exam <br>-->
 
-    <div class="input-group  col-md-6">
-  <input type="text" class="form-control" placeholder="Select Exam... e.g. NEET / JEE" aria-label="Select Exam" aria-describedby="basic-addon2">
-  <div class="input-group-append">
-  <a href = "/select_exam"><span class="input-group-text" id="basic-addon2">Select</span></a>
-  </div>
-</div>
+<!--    <div class="input-group  col-md-6">-->
+<!--  <input type="text" class="form-control" placeholder="Select Exam... e.g. NEET / JEE" aria-label="Select Exam" aria-describedby="basic-addon2">-->
+<!--  <div class="input-group-append">-->
+<!--  <a href = "/select_exam"><span class="input-group-text" id="basic-addon2">Select</span></a>-->
+<!--  </div>-->
+<!--</div>-->
 
-    <!-- <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-    <li><a class="dropdown-item active" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-</div>
-   -->
+
   </div>
     
 </div>
@@ -94,13 +113,7 @@
   </div>
 </div></div>
 </div>
-                    <!-- @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }} -->
+               
                 </div>
             </div>
        
