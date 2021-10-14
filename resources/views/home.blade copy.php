@@ -18,7 +18,7 @@
             <div class="card">
                 <!-- <div class="card-header">{{ __('Dashboard') }}</div> -->
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-  <ol class="breadcrumb ">
+  <ol class="breadcrumb">
     <li class="breadcrumb-item">Home</li>    
   </ol>
 </nav>
@@ -38,7 +38,9 @@
   <li class="list-group-item">Questionn Bank</li>
   <li class="list-group-item">Blueprint</li>
 </ul>
-
+<br>
+    <a href="/upload" class="btn btn-primary">Upload Question</a>
+  <!-- </div> -->
 </div></div>
 
 
@@ -50,7 +52,7 @@
 
 
 <!-- second card start-->
-<div class="card shadow p-1 mb-2 bg-white rounded">
+<div class="card shadow p-1 mb-1 bg-white rounded">
   <div class="card-header text-white bg-primary">
     Generate New Question Paper
   </div>
@@ -114,50 +116,48 @@
 <!-- second card ends -->
 
 <!-- third card starts -->
-<div class="card border-secondary shadow p-1 mb-2 bg-white rounded">
-  <div class="card-header text-white bg-secondary">
+<div class="card shadow p-1 mb-2 bg-white rounded">
+  <div class="card-header">
     Exams
   </div>
   <div class="card-body">
   <div class="row row-cols-1 row-cols-md-6 g-4">
       
+  <a href="/create_paper"><div class="col">
+    <div class="card shadow  mb-1 bg-white rounded">
+      <img src="images/cp1.png" class="card-img-top p-3" alt="..." >
+          <div class="card-footer">
+          <h6 class="text-muted"><center>Create Paper</center></h6>
+          </div>
+    </div>
+  </div></a>
+  
   <div class="col">
-    <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/ix_upload"><img src="images/9tha.png" class="card-img-top p-3" alt="..." ></a>         
+    <div class="card shadow  mb-1 bg-white rounded">
+    <img src="images/cp2.png" class="card-img-top  p-3" alt="..."  >
+      <div class="card-footer">
+      <h6 class="text-muted "><center>View Papers</center></h6>
+    </div>
     </div>
   </div>
   
-  <div class="col">
-    <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/x_upload"><img src="images/10tha.png" class="card-img-top  p-3" alt="..."  ></a>    
+  <a href="/products"><div class="col">
+    <div class="card shadow  mb-1 bg-white rounded">
+    <img src="images/cp3.png" class="card-img-top  p-3" alt="..." >      
+    <div class="card-footer">
+      <h6 class="text-muted"><center>Question Bank</center></h6>
     </div>
-  </div>
-  
- <div class="col">
-    <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/xi_upload"><img src="images/xith.png" class="card-img-top  p-3" alt="..." ></a>    
     </div>
-  </div>
+  </div></a>
   
   <div class="col">
-    <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/xii_upload"><img src="images/xiith.png" class="card-img-top  p-3" alt="..." ></a>   
+    <div class="card shadow  mb-1 bg-white rounded">
+    <img src="images/cp3.png" class="card-img-top  p-3" alt="..." >      
+    <div class="card-footer">
+      <h6 class="text-muted"><center>Blueprints</center></h6>
+    </div>
     </div>
   </div> 
-
-  
-  <div class="col">
-    <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/entrance_upload"><img src="images/entrance.png" class="card-img-top  p-3" alt="..." ></a>    
-    </div>
-  </div> 
-
-  <div class="col">
-    <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/entrance_upload"><img src="images/blank.png" class="card-img-top  p-3" alt="..." ></a>    
-    </div>
-  </div> 
-  
 
 </div>
 </div>

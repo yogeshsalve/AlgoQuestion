@@ -24,7 +24,15 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::view('/create_paper', "createpaper");
 Route::view('/select_exam', "selectexam");
-Route::view('/upload', "upload");
+
+
+Route::view('/ix_upload', "upload/ix_upload");
+Route::view('/x_upload', "upload/x_upload");
+Route::view('/xi_upload', "upload/xi_upload");
+Route::view('/xii_upload', "upload/xii_upload");
+Route::view('/entrance_upload', "upload/entrance_upload");
+
+
 Route::view('/test', "test");
 
 Route::view('/NEET-XI', "neetxi");
