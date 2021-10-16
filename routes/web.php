@@ -32,6 +32,8 @@ Route::view('/xi_upload', "upload/xi_upload");
 Route::view('/xii_upload', "upload/xii_upload");
 Route::view('/entrance_upload', "upload/entrance_upload");
 
+Route::post('/ix_upload', [ProductController::class, 'ix_upload']);
+
 
 Route::view('/test', "test");
 

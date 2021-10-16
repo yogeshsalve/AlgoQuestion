@@ -25,200 +25,157 @@
                 </ul>
                 <br>
                 <a href="/upload" class="btn btn-primary">Upload Questions</a> 
-                </div>
+            </div>                
           </div>
+
+          
           <div class="col-md-10">
-            <div class="card " >
-  
-              <!-- <div class="card-header text-white bg-primary mb-3">Header</div> -->
+            <div class="card">  
+              <!-- card started -->
               <div class="card-body">
               @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <h6>{{ $message }}</h6>
-        </div>
-    @endif 
-    <!-- ----- -->
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+                  <div class="alert alert-success">
+                      <h6>{{ $message }}</h6>
+                  </div>
+              @endif 
+              <!-- ----- -->
+              @if ($errors->any())
+                  <div class="alert alert-danger">
+                      <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                      <ul>
+                          @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+               @endif
 
+               <form action="/ix_upload" method="POST" enctype="multipart/form-data"> 
+               @csrf
 
-
-        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data"> 
-        @csrf
-        <div class="row justify-content-justify g-3">
-        <div class="col-auto">  
-
-            <div class="alert alert-info border border-secondary" role="alert">
-                
-                <div class="row ">
-                    <!-- <div class="col-sm-2" style="display:none">
-                    <div class="btn-group btn-group-inline m-2">
-                        <div class="form-group ">  
-                         <select class="form-control"  name="exam" id="exampleFormControlSelect1">
-                        <option value="NEET" selected >NEET</option>         
-                        </select>
-                        </div>
-                    </div>
-                    </div> -->
-
-                    <!-- <div class="col-sm-1">
-                    <div class="btn-group btn-group-inline mt-2">
-                        <div class="form-group ">   
-                        <h5 class="card-title">Standard</h5>
-                        <select class="form-control" name="standard" id="exampleFormControlSelect1">
-                        <option value="XI" selected >XI</option>         
-                        </select>
-                        </div>
-                    </div>
-                    </div> -->
-
-
-                    <div class="col-sm-2">
-                    <div class="btn-group btn-group-inline mt-2">
-                            <div class="form-group "> 
-                            <h5 class="card-title">Subject</h5>
-                    <select class="form-control" name="subject" id="subject">
-                        <option value="" selected="selected" disabled>Select Subject</option>
-                    </select>
-                    </div>
-                    </div>
-                    </div>
-                
-                    <div class="col-sm-2">
-                    <div class="btn-group btn-group-inline mt-2">
-                            <div class="form-group "> 
-                            <h5 class="card-title">Publication</h5>
-                    <select class="form-control" name="publication" id="publication">
-                        <option value="" selected="selected" disabled>Please Select Subject </option>
-                    </select>
-                    </div>
-                    </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                    <div class="btn-group btn-group-inline mt-2">
-                            <div class="form-group ">
-                                <h5 class="card-title">Chapter</h5>
-                    <select class="form-control" name="chapter" id="chapter">
-                        <option value="" selected="selected" disabled>Please Select Publication</option>
-                    </select>
-                    </div>
-                    </div>
-                    </div>
-
-
-
-
-                    <div class="col-sm-2">
-                    <div class="btn-group btn-group-inline mt-2 ">
-                        <div class="form-group ">
-                        <h5 class="card-title">Level</h5>
-                            <select class="form-control" name="level" id="exampleFormControlSelect1">
-                            <option selected disabled>Select Level</option>
-                            <option>Standard</option>
-                            <option>Higher</option>                 
-                            </select>
-                        </div>
-                    </div>
-                    </div>
-                </div>  
-            </div>
-        
-
-
-            <div class="border border-secondary">
-
-                <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 m-2">
-                    <div class="col">
-                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
-                        
-                        <div class="card-body">
-                            <h5 class="card-title">Question</h5>
-                            <input type="file" name="question" class="form-control-file" placeholder="Upload Question">
-                        </div>
-                        
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
-                       
-                        <div class="card-body">
-                            <h5 class="card-title">Answer</h5>
-                            <select class="form-control" name="answer" id="exampleFormControlSelect1">
-                                <option selected disabled>Select Answer</option>
-                                <option>A</option>
-                                <option>B</option>
-                                <option>C</option>
-                                <option>D</option>      
-                                </select>
-                        </div>
-                        
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
-                        
-                        <div class="card-body">
-                            <h5 class="card-title">Hint</h5>
-                            <input type="file" name="hint" class="form-control-file" placeholder="Hint">
-                        </div>
-                        
-                        </div>
-                    </div>
+            <div class="row">
+              
+              <div class="col-sm-1">
+                <div class="btn-group btn-group-inline mt-2">
+                  <div class="form-group ">   
+                    <h5 class="card-title">Standard</h5>
+                   <input type="text" class="form-control" readonly name="standard" value="IX" id="standard">
+                  </div>
                 </div>
-               
- 
-                
-                <div class= "text-right m-3">
-                <button type="submit" class="btn btn-primary m-2">Upload Question</button>   
-                </div>
-            </div>
-
-       
-        </form>
-<!-- ----- -->
               </div>
+
+              <div class="col-sm-2">
+                <div class="btn-group btn-group-inline mt-2">
+                  <div class="form-group ">   
+                    <h5 class="card-title">Subject</h5>
+                    <select class="form-control" name="subject" id="select1">
+                      <option value="1">Marathi</option>
+                      <option value="2">English</option>
+                      <option value="3">Hindi</option>
+                      <option value="4">Sanskrit</option>
+                      <option value="5">History</option>
+                      <option value="6">Political Science</option>
+                      <option value="7">Geography</option>
+                      <option value="8">Maths I</option>
+                      <option value="9">Maths II</option>
+                      <option value="10">Science</option>                      
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="btn-group btn-group-inline mt-2">
+                  <div class="form-group ">   
+                    <h5 class="card-title">Chapter</h5>
+                    <select class="form-control" name="chapter" id="select2">
+                      <option value="1">Banana</option>
+                      <option value="1">Apple</option>
+                      <option value="1">Orange</option>
+                      <option value="2">Wolf</option>
+                      <option value="2">Fox</option>
+                      <option value="2">Bear</option>
+                      <option value="3">Eagle</option>
+                      <option value="3">Hawk</option>
+                      <option value="4">BWM<option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+
             </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Question</label>
+              <textarea class="form-control" name="question" id="exampleFormControlInput1" placeholder="Enter Your Question Here" rows="2"></textarea>
+            </div>
+            <div class="row">
+              <div class="col mb-2">
+                <label for="exampleFormControlTextarea1" class="form-label">Answer</label>
+                <textarea class="form-control" name="answer" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+             
+              <div class="col">
+                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Image (If Any)</h5>
+                            <input type="file" name="otherimage" class="form-control-file" placeholder="Image">
+                        </div>
+                        
+                        </div>
+                    </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload Questions</button>
+            
+            </div>
+            </form>
+            </div> 
+            <!-- card ended -->
           </div>
+
         </div>
       </div>
     </div>
   </div>
 </div>
+</form>
 
-
-
-    
+<script src="jquery-3.5.1.min.js"></script>
 <script>
+var $select1 = $( '#select1' ),
+		$select2 = $( '#select2' ),
+    $options = $select2.find( 'option' );
+    
+$select1.on( 'change', function() {
+	$select2.html( $options.filter( '[value="' + this.value + '"]' ) );
+} ).trigger( 'change' );
+
+
+</script>
+ 
+<!-- <script>
 var subjectObject = {
     "PHYSICS": {
-    "MARVEL PUBLICATION": ["1. Units & Measurements", "2. Scalers & Vetors", "3. Motion in a straight light ", "4. Motion", "5. Laws of Motion & Friction", "6. Work , Energy, Power & Collision", "7. Rotational Motion", "8. Gravitation", "9.Elasticity", "10. Fluid Mechanics and Surface Tension", "11. Thermal Properties of Matter", "12. Kinetic Theory of Gases & Thermodynamics", "13. Oscillations", "14. Sound Waves and Wave Motions", "15. Stationary Waves"],
-    "MTG PUBLICATION": ["Borders", "Margins", "Backgrounds", "Float"],
-    "PYQS PUBLICATION": ["Variables", "Operators", "Functions", "Conditions"]    
+    "MARVEL PUBLICATION",
+    "MTG PUBLICATION",
+    "PYQS PUBLICATION"
   },
   "CHEMISTRY": {
-    "MARVEL PUBLICATION": ["Variables", "Strings", "Arrays"],
-    "MTG PUBLICATION": ["SELECT", "UPDATE", "DELETE"],
-    "PYQS PUBLICATION": ["Variables", "Operators", "Functions", "Conditions"]   
+    "MARVEL PUBLICATION",
+    "MTG PUBLICATION",
+    "PYQS PUBLICATION"  
   },
 
   "BIOLOGY": {
-    "MARVEL PUBLICATION": ["Variables", "Strings", "Arrays"],
-    "MTG PUBLICATION": ["SELECT", "UPDATE", "DELETE"],
-    "PYQS PUBLICATION": ["Variables", "Operators", "Functions", "Conditions"]   
+    "MARVEL PUBLICATION",
+    "MTG PUBLICATION",
+    "PYQS PUBLICATION" 
   },
 }
 window.onload = function() {
   var subjectSel = document.getElementById("subject");
-  var topicSel = document.getElementById("publication");
+  // var topicSel = document.getElementById("publication");
   var chapterSel = document.getElementById("chapter");
   for (var x in subjectObject) {
     subjectSel.options[subjectSel.options.length] = new Option(x, x);
@@ -226,22 +183,22 @@ window.onload = function() {
   subjectSel.onchange = function() {
     //empty Chapters- and Topics- dropdowns
     chapterSel.length = 1;
-    topicSel.length = 1;
+//     topicSel.length = 1;
     //display correct values
     for (var y in subjectObject[this.value]) {
-      topicSel.options[topicSel.options.length] = new Option(y, y);
+      chapterSel.options[chapterSel.options.length] = new Option(y, y);
     }
   }
-  topicSel.onchange = function() {
-    //empty Chapters dropdown
-    chapterSel.length = 1;
-    //display correct values
-    var z = subjectObject[subjectSel.value][this.value];
-    for (var i = 0; i < z.length; i++) {
-      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
-    }
-  }
+//   topicSel.onchange = function() {
+//     //empty Chapters dropdown
+//     chapterSel.length = 1;
+//     //display correct values
+//     var z = subjectObject[subjectSel.value][this.value];
+//     for (var i = 0; i < z.length; i++) {
+//       chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+//     }
+//   }
 }
-</script>
+</script> -->
 
 @endsection

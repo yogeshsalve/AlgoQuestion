@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
   
 use App\Models\Product;
+use App\Models\questions_9;
 use Illuminate\Http\Request;
   
 class ProductController extends Controller
@@ -32,6 +33,11 @@ class ProductController extends Controller
         return view('products.create');
     }
     
+
+    public function create1()
+    {
+        return view('questions_9.create');
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -289,6 +295,35 @@ class ProductController extends Controller
      }
      //cetxii function ends
 
+
+
+     //ix_upload function starts
+     public function ix_upload(Request $request)    
+     {
+         $request->validate([
+             'standard' => 'required',
+             'subject' => 'required',
+             'chapter' => 'required',
+             'question' => 'required',          
+             'answer' => 'required',                           
+         ]);
+   
+         
+         $input = $request->all();     
+             
+   
+         if ($image = $request->file('otherimage')) {
+             $destinationPath = 'otherimages/';
+             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+             $image->move($destinationPath, $profileImage);
+             $input['otherimage'] = "$profileImage";
+         } 
+      
+         questions_9::create($input);
+      
+         return redirect("/ix_upload")->with('success','Store Added Successfully.');
+     }
+     //ix_upload function ends
 
      
     /**
