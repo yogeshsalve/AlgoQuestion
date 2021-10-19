@@ -89,7 +89,7 @@
                   <div class="form-group ">   
                     <h5 class="card-title">Chapter</h5>
                     <select class="form-control" name="chapter" id="select2">
-                      <option value="1">Banana</option>
+                      <option value="1">Banana1</option>
                       <option value="1">Apple</option>
                       <option value="1">Orange</option>
                       <option value="2">Wolf</option>
