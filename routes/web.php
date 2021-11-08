@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\NineController;
+use App\Http\Controllers\vtcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,7 +34,7 @@ Route::view('/xi_upload', "upload/xi_upload");
 Route::view('/xii_upload', "upload/xii_upload");
 Route::view('/entrance_upload', "upload/entrance_upload");
 
-Route::post('/ix_upload', [ProductController::class, 'ix_upload']);
+Route::post('/ix_upload', [NineController::class, 'ix_upload']);
 
 
 Route::view('/test', "test");
@@ -53,3 +55,14 @@ Route::view('/CET-XI', "cetxi");
 Route::view('/CET-XII', "cetxii");
 Route::post('/CET-XI', [ProductController::class, 'cetxi']);
 Route::post('/CET-XII', [ProductController::class, 'cetxii']);
+
+// ********** PRINT QUESTION PAPER **********
+Route::view('/qpjeexi', "q_paper/qpjeexi");
+Route::view('/qpjeexii', "q_paper/qpjeexii");
+Route::view('/qpneetxi', "q_paper/qpneetxi");
+Route::view('/qpneetxii', "q_paper/qpneetxii");
+Route::view('/qpcetxi', "q_paper/qpcetxi");
+Route::view('/qpcetxii', "q_paper/qpcetxii");
+// ********** PRINT QUESTION PAPER **********
+Route::view('/qp', "qp");
+Route::get('/qp', [vtcontroller::class, 'ShowPaper'])->name('home');

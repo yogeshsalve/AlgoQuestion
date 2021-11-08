@@ -298,31 +298,31 @@ class ProductController extends Controller
 
 
      //ix_upload function starts
-     public function ix_upload(Request $request)    
-     {
-         $request->validate([
-             'standard' => 'required',
-             'subject' => 'required',
-             'chapter' => 'required',
-             'question' => 'required',          
-             'answer' => 'required',                           
-         ]);
+    //  public function ix_upload(Request $request)    
+    //  {
+    //      $request->validate([
+    //          'standard' => 'required',
+    //          'subject' => 'required',
+    //          'chapter' => 'required',
+    //          'question' => 'required',          
+    //          'answer' => 'required',                           
+    //      ]);
    
          
-         $input = $request->all();     
+    //      $input = $request->all();     
              
    
-         if ($image = $request->file('otherimage')) {
-             $destinationPath = 'otherimages/';
-             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-             $image->move($destinationPath, $profileImage);
-             $input['otherimage'] = "$profileImage";
-         } 
+    //      if ($image = $request->file('otherimage')) {
+    //          $destinationPath = 'otherimages/';
+    //          $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+    //          $image->move($destinationPath, $profileImage);
+    //          $input['otherimage'] = "$profileImage";
+    //      } 
       
-         questions_9::create($input);
+    //      questions_9::create($input);
       
-         return redirect("/ix_upload")->with('success','Store Added Successfully.');
-     }
+    //      return redirect("/ix_upload")->with('success','Store Added Successfully.');
+    //  }
      //ix_upload function ends
 
      

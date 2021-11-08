@@ -123,38 +123,38 @@
       
   <div class="col">
     <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/ix_upload"><img src="images/9tha.png" class="card-img-top p-3" alt="..." ></a>         
+    <a href="/ix_upload"><img src="images/9tha.png" class="card-img-top p-2" alt="..." ></a>         
     </div>
   </div>
   
   <div class="col">
     <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/x_upload"><img src="images/10tha.png" class="card-img-top  p-3" alt="..."  ></a>    
+    <a href="/x_upload"><img src="images/10tha.png" class="card-img-top p-2" alt="..."  ></a>    
     </div>
   </div>
   
  <div class="col">
     <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/xi_upload"><img src="images/xith.png" class="card-img-top  p-3" alt="..." ></a>    
+    <a href="/xi_upload"><img src="images/xith.png" class="card-img-top  p-2" alt="..." ></a>    
     </div>
   </div>
   
   <div class="col">
     <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/xii_upload"><img src="images/xiith.png" class="card-img-top  p-3" alt="..." ></a>   
+    <a href="/xii_upload"><img src="images/xiith.png" class="card-img-top  p-2" alt="..." ></a>   
     </div>
   </div> 
 
   
   <div class="col">
     <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/entrance_upload"><img src="images/entrance.png" class="card-img-top  p-3" alt="..." ></a>    
+    <a href="/entrance_upload"><img src="images/entrance.png" class="card-img-top  p-2" alt="..." ></a>    
     </div>
   </div> 
 
   <div class="col">
     <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/entrance_upload"><img src="images/blank.png" class="card-img-top  p-3" alt="..." ></a>    
+    <a href="/entrance_upload"><img src="images/blank.png" class="card-img-top  p-2" alt="..." ></a>    
     </div>
   </div> 
   
