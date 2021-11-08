@@ -153,7 +153,7 @@
     
 <script>
 var subjectObject = {
-    "MARATHI": {
+"MARATHI": {
     "1. सर्वात्मका शिवसुंदरा": ["1", "2", "3 "],
     "2. संतवाणी": ["1", "2", "3 "],
     "3. बेटा, मी ऐकतो आहे!": ["1", "2", "3 "],
@@ -176,7 +176,7 @@ var subjectObject = {
     "*. विश्वकोश": ["1", "2", "3 "],
     "*. उपयोजित लेखन   ": ["1", "2", "3 "]
   },
-
+  
   "ENGLISH": {
     "1.1 Life": ["1", "2", "3 "],
     "1.2 A Synopsis- The Swiss Family Robinson": ["1", "2", "3 "],
@@ -276,7 +276,7 @@ var subjectObject = {
   },
 
   "MATHS II": {
-    "1. Basic Concepts in Geometry": ["1", "2", "3 "],
+    " 1. Basic Concepts in Geometry": ["1", "2", "3 "],
     "2. Parellel Lines": ["1", "2", "3 "],
     "3. Triangles": ["1", "2", "3 "],   
     "4. Constructions of Triangles": ["1", "2", "3 "],   

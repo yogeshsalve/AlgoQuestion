@@ -90,7 +90,9 @@
          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                <li class="breadcrumb-item"><a href="/home">Home</a></li>
-               <li class="breadcrumb-item active" aria-current="page">Generate Question Paper - NEET XI</li>
+                <li class="breadcrumb-item"><a href="/create">Create</a></li>
+                <li class="breadcrumb-item"><a href="/create_paper">Generate Paper</a></li>
+                <li class="breadcrumb-item active" aria-current="page">MHTCET XI</li>
             </ol>
          </nav>
          <!-- </div> -->
@@ -102,10 +104,10 @@
                         <a href= "/home">
                            <li class="list-group-item">Dashboard</li>
                         </a>
-                        <li class="list-group-item " >Create Paper</li>
-                        <li class="list-group-item">View Paper</li>
-                        <li class="list-group-item">Questionn Bank</li>
-                        <li class="list-group-item">Blueprint</li>
+                        <li class="list-group-item " ><a href= "/create">Create Paper</a></li>
+                        <li class="list-group-item list-group-item-secondary">View Paper</li>
+                        <li class="list-group-item list-group-item-secondary">Questionn Bank</li>
+                        <li class="list-group-item list-group-item-secondary">Blueprint</li>
                      </ul>
                   </div>
                </div>

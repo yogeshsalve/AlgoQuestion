@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NineController;
 use App\Http\Controllers\vtcontroller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,13 +21,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+  ]);
 
+
+Route::middleware('auth')->group(function () {
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
+Route::view('/create', "create");
 Route::view('/create_paper', "createpaper");
 Route::view('/select_exam', "selectexam");
-
+Route::view('/entrance_upload', "upload/entrance_upload");
 
 Route::view('/ix_upload', "upload/ix_upload");
 Route::view('/x_upload', "upload/x_upload");
@@ -36,14 +44,9 @@ Route::view('/entrance_upload', "upload/entrance_upload");
 
 Route::post('/ix_upload', [NineController::class, 'ix_upload']);
 
-
-Route::view('/test', "test");
-
 Route::view('/NEET-XI', "neetxi");
 Route::view('/NEET-XII', "neetxii");
-
 Route::resource('products', ProductController::class);
-
 Route::post('/NEET-XII', [ProductController::class, 'store1']);
 
 Route::view('/JEE-XI', "jeexi");
@@ -56,6 +59,7 @@ Route::view('/CET-XII', "cetxii");
 Route::post('/CET-XI', [ProductController::class, 'cetxi']);
 Route::post('/CET-XII', [ProductController::class, 'cetxii']);
 
+
 // ********** PRINT QUESTION PAPER **********
 Route::view('/qpjeexi', "q_paper/qpjeexi");
 Route::view('/qpjeexii', "q_paper/qpjeexii");
@@ -66,3 +70,14 @@ Route::view('/qpcetxii', "q_paper/qpcetxii");
 // ********** PRINT QUESTION PAPER **********
 Route::view('/qp', "qp");
 Route::get('/qp', [vtcontroller::class, 'ShowPaper'])->name('home');
+
+
+
+
+
+
+Route::get('/run-migrations', function () {
+    return Artisan::call('migrate', ["--force" => true ]);
+});
+
+});

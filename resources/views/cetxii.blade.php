@@ -9,7 +9,7 @@
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/home">Home</a></li>
-          <li class="breadcrumb-item"><a href="/upload">Upload Questions</a></li>
+          <li class="breadcrumb-item"><a href="/entrance_upload">Entrance Upload</a></li>
           <li class="breadcrumb-item active" aria-current="page">MHTCET-XII</li>
         </ol>
       </nav>
@@ -19,13 +19,15 @@
             <div class="card">
                 <ul class="list-group">
                 <a href= "/home"><li class="list-group-item">Dashboard</li></a>
-                <li class="list-group-item" aria-current="true" data-toggle="tooltip" data-placement="top" title="Go on Dashboard to Create Paper">Create Paper</li>
-                <li class="list-group-item">View Paper</li>
-                <li class="list-group-item">Questionn Bank</li>
-                <li class="list-group-item">Blueprint</li>
+                <li class="list-group-item list-group-item-secondary" aria-current="true" data-toggle="tooltip" data-placement="top" title="Go on Dashboard to Create Paper">Create Paper</li>
+                <li class="list-group-item list-group-item-secondary">View Paper</li>
+                <li class="list-group-item list-group-item-secondary">Questionn Bank</li>
+                <li class="list-group-item list-group-item-secondary">Blueprint</li>
                 </ul>
+                <!--<br>-->
+                <!--<a href="/upload" class="btn btn-primary">Upload Questions</a> -->
                 <br>
-                <a href="" class="btn btn-primary">Upload Questions</a> 
+                 <a href="/products" class="btn btn-primary">Recently Uploaded Questions</a> 
                 </div>
           </div>
           <div class="col-md-10">
@@ -59,8 +61,9 @@
 
             <div class="alert alert-info border border-secondary" role="alert">
                 <div class="row">
-                    <div class="btn-group btn-group-inline m-2">
-                        <div class="form-group ">           
+                    <div class="btn-group btn-group-inline m-2" style="display:none">
+                        <div class="form-group ">      
+                        <h5 class="card-title">Examination</h5>
                         <select class="form-control" name="exam" id="exampleFormControlSelect1">
                         <option value="MHT-CET" selected >MHT-CET</option>         
                         </select>
@@ -68,7 +71,8 @@
                     </div>
 
                     <div class="btn-group btn-group-inline m-2">
-                        <div class="form-group ">           
+                        <div class="form-group ">       
+                        <h5 class="card-title">Standard</h5>
                         <select class="form-control" name="standard" id="exampleFormControlSelect1">
                         <option value="XII" selected >XII</option>         
                         </select>
@@ -80,6 +84,7 @@
 
                     <div class="btn-group btn-group-inline m-2">
                             <div class="form-group "> 
+                            <h5 class="card-title">Subject</h5>
                     <select class="form-control" name="subject" id="subject">
                         <option value="" selected="selected" disabled>Select Subject</option>
                     </select>
@@ -88,6 +93,7 @@
                 
                     <div class="btn-group btn-group-inline m-2">
                             <div class="form-group "> 
+                            <h5 class="card-title">Publication</h5>
                     <select class="form-control" name="publication" id="publication">
                         <option value="" selected="selected" disabled>Please Select Subject </option>
                     </select>
@@ -96,6 +102,7 @@
 
                     <div class="btn-group btn-group-inline m-2">
                             <div class="form-group ">
+                                <h5 class="card-title">Chapter</h5>
                     <select class="form-control" name="chapter" id="chapter">
                         <option value="" selected="selected" disabled>Please Select Publication</option>
                     </select>
@@ -109,7 +116,7 @@
 
                     <div class="btn-group btn-group-inline m-2 ">
                         <div class="form-group ">
-                        
+                        <h5 class="card-title">Level</h5>
                             <select class="form-control" name="level" id="exampleFormControlSelect1">
                             <option selected disabled>Select Level</option>
                             <option>Standard</option>
@@ -126,7 +133,7 @@
 
                 <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 m-2">
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
                         
                         <div class="card-body">
                             <h5 class="card-title">Question</h5>
@@ -136,7 +143,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
                        
                         <div class="card-body">
                             <h5 class="card-title">Answer</h5>
@@ -152,7 +159,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow p-1 mb-1 bg-white rounded">
                         
                         <div class="card-body">
                             <h5 class="card-title">Hint</h5>
@@ -166,7 +173,7 @@
  
                 
                 <div class= "text-right m-3">
-                <button type="submit" class="btn btn-primary m-2">Upload Question</button>   
+                <button type="submit" class="btn btn-primary m-2">Upload</button>   
                 </div>
             </div>
 

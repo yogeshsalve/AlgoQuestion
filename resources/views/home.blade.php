@@ -32,7 +32,7 @@
   <!-- <div class="card-body"> -->
   <ul class="list-group">
   <li class="list-group-item active" aria-current="true">Dashboard</li>
-  <a href="/create_paper"><li class="list-group-item text-dark">Create Paper</li></a>
+  <a href="/create"><li class="list-group-item text-dark">Create Paper</li></a>
   <li class="list-group-item">View Paper</li>
    <!--<a href="/upload" ><li class="list-group-item text-dark">Upload Questions</li></a>-->
   <li class="list-group-item">Questionn Bank</li>
@@ -116,7 +116,7 @@
 <!-- third card starts -->
 <div class="card border-secondary shadow p-1 mb-2 bg-white rounded">
   <div class="card-header text-white bg-secondary">
-    Exams
+    Upload Questions
   </div>
   <div class="card-body">
   <div class="row row-cols-1 row-cols-md-6 g-4">
@@ -154,7 +154,7 @@
 
   <div class="col">
     <div class="card border-secondary shadow  mb-1 bg-white rounded">
-    <a href="/entrance_upload"><img src="images/blank.png" class="card-img-top  p-2" alt="..." ></a>    
+    <a href=""><img src="images/blank.png" class="card-img-top  p-2" alt="..." ></a>    
     </div>
   </div> 
   

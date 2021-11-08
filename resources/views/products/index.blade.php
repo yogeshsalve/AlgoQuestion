@@ -22,15 +22,15 @@
   <!-- <div class="card-body"> -->
   <ul class="list-group">
   <li class="list-group-item">Dashboard</li>
-  <a href="/create_paper"><li class="list-group-item text-dark">Create Paper</li></a>
+  <a href="/create"><li class="list-group-item text-dark">Create Paper</li></a>
   <li class="list-group-item">View Paper</li>
   <li class="list-group-item " aria-current="true">Question Bank</li>
   <li class="list-group-item">Blueprint</li>
 </ul>
-<!--<br>-->
-<!--    <a href="/upload" class="btn btn-primary">Upload Question</a>-->
-  <!-- </div> -->
-</div></div>
+<br>
+    <a href="/entrance_upload" class="btn btn-primary">Upload Question</a>
+   </div> 
+</div>
 
 
 

@@ -29,7 +29,7 @@
           <div class="col-md-10 ">
             <div class="card" >
               <div class="card-header text-white bg-primary">
-              Standard IX 
+              Standard X 
               </div>
   
             
@@ -53,7 +53,7 @@
     
 
 
-    <form action="/ix_upload" method="POST" enctype="multipart/form-data"> 
+    <form action="/x_upload" method="POST" enctype="multipart/form-data"> 
         @csrf
 
             <div class="row ">

@@ -24,7 +24,8 @@
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Create Paper</li>
+                    <li class="breadcrumb-item"><a href="/create">Create</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Generate Paper</li>
                 </ol>
             </nav>
             <!-- </div> -->
@@ -74,27 +75,29 @@
 
                             <!-- ******************************************* -->
                             <div class="row">
-                                <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
-                                    <a href = "/qpjeexi"><button type="button" class="btn btn-primary btn-lg btn-block">JEE XI</button></a>
-                                </div>
-                                <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
+                                 <div class="col-sm-3 shadow p-1 m-2 bg-white rounded">
                                     <a href = "/qpneetxi"><button type="button" class="btn btn-primary btn-lg btn-block">NEET XI</button></a>
                                 </div>
-                                <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
+                                <div class="col-sm-3 shadow p-1 m-2 bg-white rounded">
+                                    <a href = "/qpjeexi"><button type="button" class="btn btn-primary btn-lg btn-block">JEE XI</button></a>
+                                </div>
+                               
+                                <div class="col-sm-3 shadow p-1 m-2 bg-white rounded">
                                 <a href = "/qpcetxi"><button type="button" class="btn btn-primary btn-lg btn-block">MHT-CET XI</button></a>
                                 </div>
                             </div>
                             <!-- ******************************************* -->
-                            <br><br>
+                           
                             <!-- ******************************************* -->
                             <div class="row">
-                                <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
-                                    <a href = "/qpjeexii"><button type="button" class="btn btn-primary btn-lg btn-block">JEE XII</button></a>
-                                </div>
-                                <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
+                                 <div class="col-sm-3 shadow p-1 m-2 bg-white rounded">
                                     <a href = "/qpneetxii"><button type="button" class="btn btn-primary btn-lg btn-block">NEET XII</button></a>
                                 </div>
-                                <div class="col-sm-4 shadow p-1 mb-1 bg-white rounded">
+                                <div class="col-sm-3 shadow p-1 m-2 bg-white rounded">
+                                    <a href = "/qpjeexii"><button type="button" class="btn btn-primary btn-lg btn-block">JEE XII</button></a>
+                                </div>
+                               
+                                <div class="col-sm-3 shadow p-1 m-2 bg-white rounded">
                                 <a href = "/qpcetxii"><button type="button" class="btn btn-primary btn-lg btn-block">MHT-CET XII</button></a>
                                 </div>
                             </div>

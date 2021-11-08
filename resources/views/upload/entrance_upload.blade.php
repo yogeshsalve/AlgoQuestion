@@ -17,14 +17,14 @@
       </nav>
       <div class="card-body">
         <div class="row" >
-          <div class = "col-md-2 ">
+          <div class = "col-md-2  ">
             <div class="card">
             <ul class="list-group">
               <a href= "/home"><li class="list-group-item">Dashboard</li></a>
-              <li class="list-group-item" aria-current="true" data-toggle="tooltip" data-placement="top" title="Go on Dashboard to Create Paper">Create Paper</li>
-              <li class="list-group-item">View Paper</li>
-              <li class="list-group-item">Questionn Bank</li>
-              <li class="list-group-item">Blueprint</li>
+              <li class="list-group-item list-group-item-secondary" aria-current="true" data-toggle="tooltip" data-placement="top" title="Go on Dashboard to Create Paper">Create Paper</li>
+              <li class="list-group-item list-group-item-secondary">View Paper</li>
+              <li class="list-group-item list-group-item-secondary">Questionn Bank</li>
+              <li class="list-group-item list-group-item-secondary">Blueprint</li>
             </ul>
             <br>
             <a href="/products" class="btn btn-primary">Recently Uploaded Questions</a> 
@@ -33,7 +33,7 @@
           
           
           
-          <div class="col-md-6">
+          <div class="col-md-6 ">
             <div class="card " >
               <div class="card-header text-white bg-primary mb-3">Upload Questions</div>
               <div class="card-body">
@@ -74,7 +74,7 @@
                                       <h3>Hey Admin, You have Selected : <span class="blink text-success"><b>MHT-CET</b></span></h3>
                                       <h4>Please select standard to proceed</h4>
                                       <div class="btn-group">
-                                      <a href= "/CET-XI"><button class="m-2 btn btn-outline-success">CLass XI</button></a>
+                                      <a href= "/CET-XI"><button class="m-2 btn btn-outline-success">Class XI</button></a>
                                       <a href= "/CET-XII"><button class="m-2 btn btn-outline-success">Class XII</button></a>                    
                                       </div>
                                     </div>

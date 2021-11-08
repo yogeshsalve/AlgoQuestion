@@ -65,7 +65,7 @@
 <?php
 $rowCount++;
 if ($rowCount % $numOfCols == 0) {
-    echo '</div><div class="row"><br><br>';
+    echo '</div><br><div class="row"><br><br>';
 }
 } ?>
 </div>

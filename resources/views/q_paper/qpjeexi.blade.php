@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <style>
    .btn {
    background-color: DodgerBlue;
@@ -80,7 +80,7 @@
               }
             }
         </script>
-</head>
+
 <!-- <div class="container"> -->
 <div class="row justify-content-center m-2">
    <div class="col-md-12 ">
@@ -90,7 +90,9 @@
          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                <li class="breadcrumb-item"><a href="/home">Home</a></li>
-               <li class="breadcrumb-item active" aria-current="page">Generate Question Paper - NEET XI</li>
+                <li class="breadcrumb-item"><a href="/create">Create</a></li>
+                <li class="breadcrumb-item"><a href="/create_paper">Generate Paper</a></li>
+                <li class="breadcrumb-item active" aria-current="page">JEE XI</li>
             </ol>
          </nav>
          <!-- </div> -->
@@ -102,10 +104,10 @@
                         <a href= "/home">
                            <li class="list-group-item">Dashboard</li>
                         </a>
-                        <li class="list-group-item " >Create Paper</li>
-                        <li class="list-group-item">View Paper</li>
-                        <li class="list-group-item">Questionn Bank</li>
-                        <li class="list-group-item">Blueprint</li>
+                        <li class="list-group-item " ><a href= "/create">Create Paper</a></li>
+                        <li class="list-group-item list-group-item-secondary">View Paper</li>
+                        <li class="list-group-item list-group-item-secondary">Questionn Bank</li>
+                        <li class="list-group-item list-group-item-secondary">Blueprint</li>
                      </ul>
                   </div>
                </div>
@@ -177,7 +179,8 @@
                 </div>
                 <div class="row" style="text-align:center;">
                     <div class="col">
-                    <button type="submit" class="btn btn-primary mb-2" >Submit</button>
+                    <!--<button type="submit" class="btn btn-primary mb-2" >Submit</button>-->
+                    <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
                
